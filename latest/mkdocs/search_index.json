@@ -17,7 +17,7 @@
         }, 
         {
             "location": "/library/", 
-            "text": "Library\n\n\n\n\nModule\n\n\n{docs} Bootstrap\n\n\n\n\nFunctions\n\n\n\n\nSampling Methods\n\n\n{docs} BasicSampling\n\n\n{docs} BalancedSampling\n\n\n{docs} ExactSampling\n\n\n{docs} ResidualSampling\n\n\n{docs} WildSampling\n\n\n\n\nConfidence Interval Methods\n\n\n{docs} BasicConfInt\n\n\n{docs} PercentileConfInt\n\n\n{docs} NormalConfInt\n\n\n{docs} BCaConfInt\n\n\n{docs} StudentConfInt", 
+            "text": "Library\n\n\n\n\nContents\n\n\n\n\nLibrary\n\n\nContents\n\n\nIndex\n\n\nModule\n\n\nSampling Methods\n\n\nConfidence Interval Methods\n\n\n\n\n\n\n\n\n\n\nIndex\n\n\n\n\nBootstrap\n\n\n\n\n\n\nModule\n\n\n#\n\n\nBootstrap\n \n \nModule\n.\n\n\n\n\nBootstrap package\n\n\nStatistical bootstrapping for Julia\n\n\n\n\nSampling Methods\n\n\n{docs}\nBasicSampling\nBalancedSampling\nExactSampling\nResidualSampling\nWildSampling\n\n\n\n\n\n\n\nConfidence Interval Methods\n\n\n{docs}\nBasicConfInt\nPercentileConfInt\nNormalConfInt\nBCaConfInt\nStudentConfInt", 
             "title": "Libary"
         }, 
         {
@@ -26,23 +26,33 @@
             "title": "Library"
         }, 
         {
+            "location": "/library/#contents", 
+            "text": "Library  Contents  Index  Module  Sampling Methods  Confidence Interval Methods", 
+            "title": "Contents"
+        }, 
+        {
+            "location": "/library/#index", 
+            "text": "Bootstrap", 
+            "title": "Index"
+        }, 
+        {
             "location": "/library/#module", 
-            "text": "{docs} Bootstrap", 
+            "text": "#  Bootstrap     Module .", 
             "title": "Module"
         }, 
         {
-            "location": "/library/#functions", 
-            "text": "", 
-            "title": "Functions"
+            "location": "/library/#bootstrap-package", 
+            "text": "Statistical bootstrapping for Julia", 
+            "title": "Bootstrap package"
         }, 
         {
             "location": "/library/#sampling-methods", 
-            "text": "{docs} BasicSampling  {docs} BalancedSampling  {docs} ExactSampling  {docs} ResidualSampling  {docs} WildSampling", 
+            "text": "{docs}\nBasicSampling\nBalancedSampling\nExactSampling\nResidualSampling\nWildSampling", 
             "title": "Sampling Methods"
         }, 
         {
             "location": "/library/#confidence-interval-methods", 
-            "text": "{docs} BasicConfInt  {docs} PercentileConfInt  {docs} NormalConfInt  {docs} BCaConfInt  {docs} StudentConfInt", 
+            "text": "{docs}\nBasicConfInt\nPercentileConfInt\nNormalConfInt\nBCaConfInt\nStudentConfInt", 
             "title": "Confidence Interval Methods"
         }, 
         {
