@@ -202,20 +202,14 @@
             </li>
           
             <li class="anchor">
-              <a title="Sampling Methods" href="#sampling-methods">
-                Sampling Methods
+              <a title="Sampling" href="#sampling">
+                Sampling
               </a>
             </li>
           
             <li class="anchor">
-              <a title="Confidence Interval Methods" href="#confidence-interval-methods">
-                Confidence Interval Methods
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="General Methods" href="#general-methods">
-                General Methods
+              <a title="Confidence Intervals" href="#confidence-intervals">
+                Confidence Intervals
               </a>
             </li>
           
@@ -262,9 +256,8 @@
 <li><a href="./#Contents-1">Contents</a></li>
 <li><a href="./#Index-1">Index</a></li>
 <li><a href="./#Module-1">Module</a></li>
-<li><a href="./#Sampling-Methods-1">Sampling Methods</a></li>
-<li><a href="./#Confidence-Interval-Methods-1">Confidence Interval Methods</a></li>
-<li><a href="./#General-Methods-1">General Methods</a></li>
+<li><a href="./#Sampling-1">Sampling</a></li>
+<li><a href="./#Confidence-Intervals-1">Confidence Intervals</a></li>
 </ul>
 </li>
 </ul>
@@ -276,9 +269,14 @@
 <li><a href="./#Bootstrap.BalancedSampling"><code>Bootstrap.BalancedSampling</code></a></li>
 <li><a href="./#Bootstrap.BasicConfInt"><code>Bootstrap.BasicConfInt</code></a></li>
 <li><a href="./#Bootstrap.BasicSampling"><code>Bootstrap.BasicSampling</code></a></li>
+<li><a href="./#Bootstrap.ExactSampling"><code>Bootstrap.ExactSampling</code></a></li>
 <li><a href="./#Bootstrap.NormalConfInt"><code>Bootstrap.NormalConfInt</code></a></li>
 <li><a href="./#Bootstrap.PercentileConfInt"><code>Bootstrap.PercentileConfInt</code></a></li>
+<li><a href="./#Bootstrap.ResidualSampling"><code>Bootstrap.ResidualSampling</code></a></li>
+<li><a href="./#Bootstrap.WildSampling"><code>Bootstrap.WildSampling</code></a></li>
+<li><a href="./#Bootstrap.noise"><code>Bootstrap.noise</code></a></li>
 <li><a href="./#Bootstrap.nrun"><code>Bootstrap.nrun</code></a></li>
+<li><a href="./#Bootstrap.statistic"><code>Bootstrap.statistic</code></a></li>
 </ul>
 <p><a id='Module-1'></a></p>
 <h2 id="module">Module</h2>
@@ -286,8 +284,8 @@
 <strong><code>Bootstrap</code></strong> &mdash; <em>Module</em>.</p>
 <p><strong>Bootstrap package</strong></p>
 <p>Statistical bootstrapping for Julia</p>
-<p><a id='Sampling-Methods-1'></a></p>
-<h2 id="sampling-methods">Sampling Methods</h2>
+<p><a id='Sampling-1'></a></p>
+<h2 id="sampling">Sampling</h2>
 <p><a id='Bootstrap.BasicSampling' href='#Bootstrap.BasicSampling'>#</a>
 <strong><code>Bootstrap.BasicSampling</code></strong> &mdash; <em>Type</em>.</p>
 <p>Basic Sampling</p>
@@ -302,8 +300,53 @@
 </pre></div>
 
 
-<p><a id='Confidence-Interval-Methods-1'></a></p>
-<h2 id="confidence-interval-methods">Confidence Interval Methods</h2>
+<p><a id='Bootstrap.ExactSampling' href='#Bootstrap.ExactSampling'>#</a>
+<strong><code>Bootstrap.ExactSampling</code></strong> &mdash; <em>Type</em>.</p>
+<p>Exact Sampling</p>
+<div class="codehilite"><pre><span></span><span class="n">ExactSampling</span><span class="p">()</span>
+</pre></div>
+
+
+<p><a id='Bootstrap.WildSampling' href='#Bootstrap.WildSampling'>#</a>
+<strong><code>Bootstrap.WildSampling</code></strong> &mdash; <em>Type</em>.</p>
+<p>Wild Sampling</p>
+<div class="codehilite"><pre><span></span><span class="n">WildSampling</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="n">rademacher</span><span class="p">)</span>
+<span class="n">WildSampling</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="n">mammen</span><span class="p">)</span>
+</pre></div>
+
+
+<p><a id='Bootstrap.ResidualSampling' href='#Bootstrap.ResidualSampling'>#</a>
+<strong><code>Bootstrap.ResidualSampling</code></strong> &mdash; <em>Type</em>.</p>
+<p>Residual Sampling</p>
+<div class="codehilite"><pre><span></span><span class="n">ResidualSampling</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+</pre></div>
+
+
+<p><a id='Bootstrap.nrun' href='#Bootstrap.nrun'>#</a>
+<strong><code>Bootstrap.nrun</code></strong> &mdash; <em>Function</em>.</p>
+<p>Number of samples drawn from a bootstrap sampling</p>
+<div class="codehilite"><pre><span></span><span class="n">bs</span> <span class="o">=</span> <span class="n">BasicSampling</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+<span class="n">nrun</span><span class="p">(</span><span class="n">bs</span><span class="p">)</span>
+
+<span class="c"># output</span>
+
+<span class="mi">1000</span>
+</pre></div>
+
+
+<p><a id='Bootstrap.statistic' href='#Bootstrap.statistic'>#</a>
+<strong><code>Bootstrap.statistic</code></strong> &mdash; <em>Function</em>.</p>
+<p>Return the statistic function of a <code>BootstrapSample</code></p>
+<div class="codehilite"><pre><span></span><span class="n">bs</span> <span class="o">=</span> <span class="n">bootstrap</span><span class="p">(</span><span class="n">randn</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span> <span class="n">mean</span><span class="p">,</span> <span class="n">BasicSampling</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
+<span class="n">statistic</span><span class="p">(</span><span class="n">bs</span><span class="p">)</span>
+</pre></div>
+
+
+<p><a id='Bootstrap.noise' href='#Bootstrap.noise'>#</a>
+<strong><code>Bootstrap.noise</code></strong> &mdash; <em>Function</em>.</p>
+<p>Return the noise function of a wild bootstrap sampling</p>
+<p><a id='Confidence-Intervals-1'></a></p>
+<h2 id="confidence-intervals">Confidence Intervals</h2>
 <p><a id='Bootstrap.BasicConfInt' href='#Bootstrap.BasicConfInt'>#</a>
 <strong><code>Bootstrap.BasicConfInt</code></strong> &mdash; <em>Type</em>.</p>
 <p>Basic Confidence Interval</p>
@@ -329,20 +372,6 @@
 <strong><code>Bootstrap.BCaConfInt</code></strong> &mdash; <em>Type</em>.</p>
 <p>Bias-Corrected and Accelerated (BCa) Confidence Interval</p>
 <div class="codehilite"><pre><span></span><span class="n">BCaConfInt</span><span class="p">(</span><span class="mf">0.95</span><span class="p">)</span>
-</pre></div>
-
-
-<p><a id='General-Methods-1'></a></p>
-<h2 id="general-methods">General Methods</h2>
-<p><a id='Bootstrap.nrun' href='#Bootstrap.nrun'>#</a>
-<strong><code>Bootstrap.nrun</code></strong> &mdash; <em>Function</em>.</p>
-<p>Number of samples drawn from a bootstrap sampling</p>
-<div class="codehilite"><pre><span></span><span class="n">bs</span> <span class="o">=</span> <span class="n">BasicSampling</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
-<span class="n">nrun</span><span class="p">(</span><span class="n">bs</span><span class="p">)</span>
-
-<span class="c"># output</span>
-
-<span class="mi">1000</span>
 </pre></div>
           <aside class="copyright" role="note">
             
