@@ -123,7 +123,7 @@
       <div class="drawer">
         <nav aria-label="Navigation">
   
-  <a href="https://github.com/julian-gehring/Bootstrap.jl" class="project">
+  <a href="https://github.com/juliangehring/Bootstrap.jl" class="project">
     <div class="banner">
       
       <div class="name">
@@ -135,7 +135,7 @@
         </strong>
         
           <br>
-          julian-gehring/Bootstrap.jl
+          juliangehring/Bootstrap.jl
         
       </div>
     </div>
@@ -146,12 +146,12 @@
         <ul class="repo">
           <li class="repo-download">
             
-            <a href="https://github.com/julian-gehring/Bootstrap.jl/archive/master.zip" target="_blank" title="Download" data-action="download">
+            <a href="https://github.com/juliangehring/Bootstrap.jl/archive/master.zip" target="_blank" title="Download" data-action="download">
               <i class="icon icon-download"></i> Download
             </a>
           </li>
           <li class="repo-stars">
-            <a href="https://github.com/julian-gehring/Bootstrap.jl/stargazers" target="_blank" title="Stargazers" data-action="star">
+            <a href="https://github.com/juliangehring/Bootstrap.jl/stargazers" target="_blank" title="Stargazers" data-action="star">
               <i class="icon icon-star"></i> Stars
               <span class="count">&ndash;</span>
             </a>
@@ -201,6 +201,24 @@
               </a>
             </li>
           
+            <li class="anchor">
+              <a title="Sampling Methods" href="#sampling-methods">
+                Sampling Methods
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Confidence Interval Methods" href="#confidence-interval-methods">
+                Confidence Interval Methods
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="General Methods" href="#general-methods">
+                General Methods
+              </a>
+            </li>
+          
         </ul>
       
     
@@ -246,6 +264,7 @@
 <li><a href="./#Module-1">Module</a></li>
 <li><a href="./#Sampling-Methods-1">Sampling Methods</a></li>
 <li><a href="./#Confidence-Interval-Methods-1">Confidence Interval Methods</a></li>
+<li><a href="./#General-Methods-1">General Methods</a></li>
 </ul>
 </li>
 </ul>
@@ -253,33 +272,77 @@
 <h2 id="index">Index</h2>
 <ul>
 <li><a href="./#Bootstrap"><code>Bootstrap</code></a></li>
+<li><a href="./#Bootstrap.BCaConfInt"><code>Bootstrap.BCaConfInt</code></a></li>
+<li><a href="./#Bootstrap.BalancedSampling"><code>Bootstrap.BalancedSampling</code></a></li>
+<li><a href="./#Bootstrap.BasicConfInt"><code>Bootstrap.BasicConfInt</code></a></li>
+<li><a href="./#Bootstrap.BasicSampling"><code>Bootstrap.BasicSampling</code></a></li>
+<li><a href="./#Bootstrap.NormalConfInt"><code>Bootstrap.NormalConfInt</code></a></li>
+<li><a href="./#Bootstrap.PercentileConfInt"><code>Bootstrap.PercentileConfInt</code></a></li>
+<li><a href="./#Bootstrap.nrun"><code>Bootstrap.nrun</code></a></li>
 </ul>
 <p><a id='Module-1'></a></p>
 <h2 id="module">Module</h2>
 <p><a id='Bootstrap' href='#Bootstrap'>#</a>
 <strong><code>Bootstrap</code></strong> &mdash; <em>Module</em>.</p>
-<hr />
-<h1 id="bootstrap-package">Bootstrap package</h1>
+<p><strong>Bootstrap package</strong></p>
 <p>Statistical bootstrapping for Julia</p>
 <p><a id='Sampling-Methods-1'></a></p>
 <h2 id="sampling-methods">Sampling Methods</h2>
-<div class="codehilite"><pre><span></span>{docs}
-BasicSampling
-BalancedSampling
-ExactSampling
-ResidualSampling
-WildSampling
+<p><a id='Bootstrap.BasicSampling' href='#Bootstrap.BasicSampling'>#</a>
+<strong><code>Bootstrap.BasicSampling</code></strong> &mdash; <em>Type</em>.</p>
+<p>Basic Sampling</p>
+<div class="codehilite"><pre><span></span><span class="n">BasicSampling</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+</pre></div>
+
+
+<p><a id='Bootstrap.BalancedSampling' href='#Bootstrap.BalancedSampling'>#</a>
+<strong><code>Bootstrap.BalancedSampling</code></strong> &mdash; <em>Type</em>.</p>
+<p>Balanced Sampling</p>
+<div class="codehilite"><pre><span></span><span class="n">BalancedSampling</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
 </pre></div>
 
 
 <p><a id='Confidence-Interval-Methods-1'></a></p>
 <h2 id="confidence-interval-methods">Confidence Interval Methods</h2>
-<div class="codehilite"><pre><span></span>{docs}
-BasicConfInt
-PercentileConfInt
-NormalConfInt
-BCaConfInt
-StudentConfInt
+<p><a id='Bootstrap.BasicConfInt' href='#Bootstrap.BasicConfInt'>#</a>
+<strong><code>Bootstrap.BasicConfInt</code></strong> &mdash; <em>Type</em>.</p>
+<p>Basic Confidence Interval</p>
+<div class="codehilite"><pre><span></span><span class="n">BasicConfInt</span><span class="p">(</span><span class="mf">0.95</span><span class="p">)</span>
+</pre></div>
+
+
+<p><a id='Bootstrap.PercentileConfInt' href='#Bootstrap.PercentileConfInt'>#</a>
+<strong><code>Bootstrap.PercentileConfInt</code></strong> &mdash; <em>Type</em>.</p>
+<p>Percentile Confidence Interval</p>
+<div class="codehilite"><pre><span></span><span class="n">PercentileConfInt</span><span class="p">(</span><span class="mf">0.95</span><span class="p">)</span>
+</pre></div>
+
+
+<p><a id='Bootstrap.NormalConfInt' href='#Bootstrap.NormalConfInt'>#</a>
+<strong><code>Bootstrap.NormalConfInt</code></strong> &mdash; <em>Type</em>.</p>
+<p>Normal Confidence Interval</p>
+<div class="codehilite"><pre><span></span><span class="n">NormalConfInt</span><span class="p">(</span><span class="mf">0.95</span><span class="p">)</span>
+</pre></div>
+
+
+<p><a id='Bootstrap.BCaConfInt' href='#Bootstrap.BCaConfInt'>#</a>
+<strong><code>Bootstrap.BCaConfInt</code></strong> &mdash; <em>Type</em>.</p>
+<p>Bias-Corrected and Accelerated (BCa) Confidence Interval</p>
+<div class="codehilite"><pre><span></span><span class="n">BCaConfInt</span><span class="p">(</span><span class="mf">0.95</span><span class="p">)</span>
+</pre></div>
+
+
+<p><a id='General-Methods-1'></a></p>
+<h2 id="general-methods">General Methods</h2>
+<p><a id='Bootstrap.nrun' href='#Bootstrap.nrun'>#</a>
+<strong><code>Bootstrap.nrun</code></strong> &mdash; <em>Function</em>.</p>
+<p>Number of samples drawn from a bootstrap sampling</p>
+<div class="codehilite"><pre><span></span><span class="n">bs</span> <span class="o">=</span> <span class="n">BasicSampling</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+<span class="n">nrun</span><span class="p">(</span><span class="n">bs</span><span class="p">)</span>
+
+<span class="c"># output</span>
+
+<span class="mi">1000</span>
 </pre></div>
           <aside class="copyright" role="note">
             
@@ -350,7 +413,7 @@ StudentConfInt
     </main>
     <script>
       var base_url = '..';
-      var repo_id  = 'julian-gehring/Bootstrap.jl';
+      var repo_id  = 'juliangehring/Bootstrap.jl';
     </script>
     <script src="../assets/javascripts/application-997097ee0c.js"></script>
     

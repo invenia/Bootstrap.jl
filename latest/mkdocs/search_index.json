@@ -17,7 +17,7 @@
         }, 
         {
             "location": "/library/", 
-            "text": "Library\n\n\n\n\nContents\n\n\n\n\nLibrary\n\n\nContents\n\n\nIndex\n\n\nModule\n\n\nSampling Methods\n\n\nConfidence Interval Methods\n\n\n\n\n\n\n\n\n\n\nIndex\n\n\n\n\nBootstrap\n\n\n\n\n\n\nModule\n\n\n#\n\n\nBootstrap\n \n \nModule\n.\n\n\n\n\nBootstrap package\n\n\nStatistical bootstrapping for Julia\n\n\n\n\nSampling Methods\n\n\n{docs}\nBasicSampling\nBalancedSampling\nExactSampling\nResidualSampling\nWildSampling\n\n\n\n\n\n\n\nConfidence Interval Methods\n\n\n{docs}\nBasicConfInt\nPercentileConfInt\nNormalConfInt\nBCaConfInt\nStudentConfInt", 
+            "text": "Library\n\n\n\n\nContents\n\n\n\n\nLibrary\n\n\nContents\n\n\nIndex\n\n\nModule\n\n\nSampling Methods\n\n\nConfidence Interval Methods\n\n\nGeneral Methods\n\n\n\n\n\n\n\n\n\n\nIndex\n\n\n\n\nBootstrap\n\n\nBootstrap.BCaConfInt\n\n\nBootstrap.BalancedSampling\n\n\nBootstrap.BasicConfInt\n\n\nBootstrap.BasicSampling\n\n\nBootstrap.NormalConfInt\n\n\nBootstrap.PercentileConfInt\n\n\nBootstrap.nrun\n\n\n\n\n\n\nModule\n\n\n#\n\n\nBootstrap\n \n \nModule\n.\n\n\nBootstrap package\n\n\nStatistical bootstrapping for Julia\n\n\n\n\nSampling Methods\n\n\n#\n\n\nBootstrap.BasicSampling\n \n \nType\n.\n\n\nBasic Sampling\n\n\nBasicSampling\n(\n1000\n)\n\n\n\n\n\n\n#\n\n\nBootstrap.BalancedSampling\n \n \nType\n.\n\n\nBalanced Sampling\n\n\nBalancedSampling\n(\n1000\n)\n\n\n\n\n\n\n\n\nConfidence Interval Methods\n\n\n#\n\n\nBootstrap.BasicConfInt\n \n \nType\n.\n\n\nBasic Confidence Interval\n\n\nBasicConfInt\n(\n0.95\n)\n\n\n\n\n\n\n#\n\n\nBootstrap.PercentileConfInt\n \n \nType\n.\n\n\nPercentile Confidence Interval\n\n\nPercentileConfInt\n(\n0.95\n)\n\n\n\n\n\n\n#\n\n\nBootstrap.NormalConfInt\n \n \nType\n.\n\n\nNormal Confidence Interval\n\n\nNormalConfInt\n(\n0.95\n)\n\n\n\n\n\n\n#\n\n\nBootstrap.BCaConfInt\n \n \nType\n.\n\n\nBias-Corrected and Accelerated (BCa) Confidence Interval\n\n\nBCaConfInt\n(\n0.95\n)\n\n\n\n\n\n\n\n\nGeneral Methods\n\n\n#\n\n\nBootstrap.nrun\n \n \nFunction\n.\n\n\nNumber of samples drawn from a bootstrap sampling\n\n\nbs\n \n=\n \nBasicSampling\n(\n1000\n)\n\n\nnrun\n(\nbs\n)\n\n\n\n# output\n\n\n\n1000", 
             "title": "Libary"
         }, 
         {
@@ -27,33 +27,33 @@
         }, 
         {
             "location": "/library/#contents", 
-            "text": "Library  Contents  Index  Module  Sampling Methods  Confidence Interval Methods", 
+            "text": "Library  Contents  Index  Module  Sampling Methods  Confidence Interval Methods  General Methods", 
             "title": "Contents"
         }, 
         {
             "location": "/library/#index", 
-            "text": "Bootstrap", 
+            "text": "Bootstrap  Bootstrap.BCaConfInt  Bootstrap.BalancedSampling  Bootstrap.BasicConfInt  Bootstrap.BasicSampling  Bootstrap.NormalConfInt  Bootstrap.PercentileConfInt  Bootstrap.nrun", 
             "title": "Index"
         }, 
         {
             "location": "/library/#module", 
-            "text": "#  Bootstrap     Module .", 
+            "text": "#  Bootstrap     Module .  Bootstrap package  Statistical bootstrapping for Julia", 
             "title": "Module"
         }, 
         {
-            "location": "/library/#bootstrap-package", 
-            "text": "Statistical bootstrapping for Julia", 
-            "title": "Bootstrap package"
-        }, 
-        {
             "location": "/library/#sampling-methods", 
-            "text": "{docs}\nBasicSampling\nBalancedSampling\nExactSampling\nResidualSampling\nWildSampling", 
+            "text": "#  Bootstrap.BasicSampling     Type .  Basic Sampling  BasicSampling ( 1000 )   #  Bootstrap.BalancedSampling     Type .  Balanced Sampling  BalancedSampling ( 1000 )", 
             "title": "Sampling Methods"
         }, 
         {
             "location": "/library/#confidence-interval-methods", 
-            "text": "{docs}\nBasicConfInt\nPercentileConfInt\nNormalConfInt\nBCaConfInt\nStudentConfInt", 
+            "text": "#  Bootstrap.BasicConfInt     Type .  Basic Confidence Interval  BasicConfInt ( 0.95 )   #  Bootstrap.PercentileConfInt     Type .  Percentile Confidence Interval  PercentileConfInt ( 0.95 )   #  Bootstrap.NormalConfInt     Type .  Normal Confidence Interval  NormalConfInt ( 0.95 )   #  Bootstrap.BCaConfInt     Type .  Bias-Corrected and Accelerated (BCa) Confidence Interval  BCaConfInt ( 0.95 )", 
             "title": "Confidence Interval Methods"
+        }, 
+        {
+            "location": "/library/#general-methods", 
+            "text": "#  Bootstrap.nrun     Function .  Number of samples drawn from a bootstrap sampling  bs   =   BasicSampling ( 1000 )  nrun ( bs )  # output  1000", 
+            "title": "General Methods"
         }, 
         {
             "location": "/LICENSE/", 
