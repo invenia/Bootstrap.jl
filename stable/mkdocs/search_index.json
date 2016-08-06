@@ -1,0 +1,59 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "Motivation\n\n\n{meta}\nCurrentModule = Bootstrap\n\n\n\n\n\nBootstrapping is a widely applicable technique for statistical estimation.\n\n\n\n\n\n\nReferences\n\n\nThe \nbootstrapping wikipedia article\n is a comprehensive summary of the topic.  An extensive description of the bootstrap is the focus of the book \nDavison and Hinkley (1997): \nBootstrap Methods and Their Application\n.  Most of the methodology covered in the book is implemented in the \nboot\n package for the \nR programming language\n.", 
+            "title": "Introduction"
+        }, 
+        {
+            "location": "/#motivation", 
+            "text": "{meta}\nCurrentModule = Bootstrap  Bootstrapping is a widely applicable technique for statistical estimation.", 
+            "title": "Motivation"
+        }, 
+        {
+            "location": "/#references", 
+            "text": "The  bootstrapping wikipedia article  is a comprehensive summary of the topic.  An extensive description of the bootstrap is the focus of the book  Davison and Hinkley (1997):  Bootstrap Methods and Their Application .  Most of the methodology covered in the book is implemented in the  boot  package for the  R programming language .", 
+            "title": "References"
+        }, 
+        {
+            "location": "/library/", 
+            "text": "{meta}\nCurrentModule = Bootstrap\nDocTestSetup  = quote\n    using Bootstrap\nend\n\n\n\n\n\n\n\nLibrary\n\n\n\n\nContents\n\n\n{contents}\nPages = [\nlibrary.md\n]\n\n\n\n\n\n\n\nIndex\n\n\n{index}\nPages = [\nlibrary.md\n]\n\n\n\n\n\n\n\nModule\n\n\n{docs}\nBootstrap\n\n\n\n\n\n\n\nSampling\n\n\n{docs}\nBasicSampling\nBalancedSampling\nExactSampling\nWildSampling\nResidualSampling\nnrun\nstatistic\nnoise\n\n\n\n\n\n\n\nConfidence Intervals\n\n\n{docs}\nBasicConfInt\nPercentileConfInt\nNormalConfInt\nBCaConfInt", 
+            "title": "Library"
+        }, 
+        {
+            "location": "/library/#library", 
+            "text": "", 
+            "title": "Library"
+        }, 
+        {
+            "location": "/library/#contents", 
+            "text": "{contents}\nPages = [ library.md ]", 
+            "title": "Contents"
+        }, 
+        {
+            "location": "/library/#index", 
+            "text": "{index}\nPages = [ library.md ]", 
+            "title": "Index"
+        }, 
+        {
+            "location": "/library/#module", 
+            "text": "{docs}\nBootstrap", 
+            "title": "Module"
+        }, 
+        {
+            "location": "/library/#sampling", 
+            "text": "{docs}\nBasicSampling\nBalancedSampling\nExactSampling\nWildSampling\nResidualSampling\nnrun\nstatistic\nnoise", 
+            "title": "Sampling"
+        }, 
+        {
+            "location": "/library/#confidence-intervals", 
+            "text": "{docs}\nBasicConfInt\nPercentileConfInt\nNormalConfInt\nBCaConfInt", 
+            "title": "Confidence Intervals"
+        }, 
+        {
+            "location": "/LICENSE/", 
+            "text": "The Bootstrap.jl package is licensed under the MIT \"Expat\" License:\n\n\n\n\nCopyright (c) 2014-2016: Julian Gehring, Nikolaos Ignatiadis.\n\n\nCopyright (c) 2014: Jarno Lepp\u00e4nen.\n\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.", 
+            "title": "License"
+        }
+    ]
+}
