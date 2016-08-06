@@ -238,131 +238,58 @@
       <article class="article">
         <div class="wrapper">
           
-          <p><a id='Library-1'></a></p>
+          <div class="codehilite"><pre><span></span>{meta}
+CurrentModule = Bootstrap
+DocTestSetup  = quote
+    using Bootstrap
+end
+</pre></div>
+
+
+<p><a id='Library-1'></a></p>
 <h1 id="library">Library</h1>
 <p><a id='Contents-1'></a></p>
 <h2 id="contents">Contents</h2>
-<ul>
-<li><a href="./#Library-1">Library</a><ul>
-<li><a href="./#Contents-1">Contents</a></li>
-<li><a href="./#Index-1">Index</a></li>
-<li><a href="./#Module-1">Module</a></li>
-<li><a href="./#Sampling-1">Sampling</a></li>
-<li><a href="./#Confidence-Intervals-1">Confidence Intervals</a></li>
-</ul>
-</li>
-</ul>
+<div class="codehilite"><pre><span></span>{contents}
+Pages = [&quot;library.md&quot;]
+</pre></div>
+
+
 <p><a id='Index-1'></a></p>
 <h2 id="index">Index</h2>
-<ul>
-<li><a href="./#Main.Bootstrap"><code>Main.Bootstrap</code></a></li>
-<li><a href="./#Bootstrap.BCaConfInt"><code>Bootstrap.BCaConfInt</code></a></li>
-<li><a href="./#Bootstrap.BalancedSampling"><code>Bootstrap.BalancedSampling</code></a></li>
-<li><a href="./#Bootstrap.BasicConfInt"><code>Bootstrap.BasicConfInt</code></a></li>
-<li><a href="./#Bootstrap.BasicSampling"><code>Bootstrap.BasicSampling</code></a></li>
-<li><a href="./#Bootstrap.ExactSampling"><code>Bootstrap.ExactSampling</code></a></li>
-<li><a href="./#Bootstrap.NormalConfInt"><code>Bootstrap.NormalConfInt</code></a></li>
-<li><a href="./#Bootstrap.PercentileConfInt"><code>Bootstrap.PercentileConfInt</code></a></li>
-<li><a href="./#Bootstrap.ResidualSampling"><code>Bootstrap.ResidualSampling</code></a></li>
-<li><a href="./#Bootstrap.WildSampling"><code>Bootstrap.WildSampling</code></a></li>
-<li><a href="./#Bootstrap.noise"><code>Bootstrap.noise</code></a></li>
-<li><a href="./#Bootstrap.nrun"><code>Bootstrap.nrun</code></a></li>
-<li><a href="./#Bootstrap.statistic"><code>Bootstrap.statistic</code></a></li>
-</ul>
+<div class="codehilite"><pre><span></span>{index}
+Pages = [&quot;library.md&quot;]
+</pre></div>
+
+
 <p><a id='Module-1'></a></p>
 <h2 id="module">Module</h2>
-<p><a id='Main.Bootstrap' href='#Main.Bootstrap'>#</a>
-<strong><code>Main.Bootstrap</code></strong> &mdash; <em>Module</em>.</p>
-<p><strong>Bootstrap package</strong></p>
-<p>Statistical bootstrapping for Julia</p>
+<div class="codehilite"><pre><span></span>{docs}
+Bootstrap
+</pre></div>
+
+
 <p><a id='Sampling-1'></a></p>
 <h2 id="sampling">Sampling</h2>
-<p><a id='Bootstrap.BasicSampling' href='#Bootstrap.BasicSampling'>#</a>
-<strong><code>Bootstrap.BasicSampling</code></strong> &mdash; <em>Type</em>.</p>
-<p>Basic Sampling</p>
-<div class="codehilite"><pre><span></span><span class="n">BasicSampling</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span>{docs}
+BasicSampling
+BalancedSampling
+ExactSampling
+WildSampling
+ResidualSampling
+nrun
+statistic
+noise
 </pre></div>
 
 
-<p><a id='Bootstrap.BalancedSampling' href='#Bootstrap.BalancedSampling'>#</a>
-<strong><code>Bootstrap.BalancedSampling</code></strong> &mdash; <em>Type</em>.</p>
-<p>Balanced Sampling</p>
-<div class="codehilite"><pre><span></span><span class="n">BalancedSampling</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
-</pre></div>
-
-
-<p><a id='Bootstrap.ExactSampling' href='#Bootstrap.ExactSampling'>#</a>
-<strong><code>Bootstrap.ExactSampling</code></strong> &mdash; <em>Type</em>.</p>
-<p>Exact Sampling</p>
-<div class="codehilite"><pre><span></span><span class="n">ExactSampling</span><span class="p">()</span>
-</pre></div>
-
-
-<p><a id='Bootstrap.WildSampling' href='#Bootstrap.WildSampling'>#</a>
-<strong><code>Bootstrap.WildSampling</code></strong> &mdash; <em>Type</em>.</p>
-<p>Wild Sampling</p>
-<div class="codehilite"><pre><span></span><span class="n">WildSampling</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="n">rademacher</span><span class="p">)</span>
-<span class="n">WildSampling</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="n">mammen</span><span class="p">)</span>
-</pre></div>
-
-
-<p><a id='Bootstrap.ResidualSampling' href='#Bootstrap.ResidualSampling'>#</a>
-<strong><code>Bootstrap.ResidualSampling</code></strong> &mdash; <em>Type</em>.</p>
-<p>Residual Sampling</p>
-<div class="codehilite"><pre><span></span><span class="n">ResidualSampling</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
-</pre></div>
-
-
-<p><a id='Bootstrap.nrun' href='#Bootstrap.nrun'>#</a>
-<strong><code>Bootstrap.nrun</code></strong> &mdash; <em>Function</em>.</p>
-<p>Number of samples drawn from a bootstrap sampling</p>
-<div class="codehilite"><pre><span></span><span class="n">bs</span> <span class="o">=</span> <span class="n">BasicSampling</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
-<span class="n">nrun</span><span class="p">(</span><span class="n">bs</span><span class="p">)</span>
-
-<span class="c"># output</span>
-
-<span class="mi">1000</span>
-</pre></div>
-
-
-<p><a id='Bootstrap.statistic' href='#Bootstrap.statistic'>#</a>
-<strong><code>Bootstrap.statistic</code></strong> &mdash; <em>Function</em>.</p>
-<p>Return the statistic function of a <code>BootstrapSample</code></p>
-<div class="codehilite"><pre><span></span><span class="n">bs</span> <span class="o">=</span> <span class="n">bootstrap</span><span class="p">(</span><span class="n">randn</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span> <span class="n">mean</span><span class="p">,</span> <span class="n">BasicSampling</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
-<span class="n">statistic</span><span class="p">(</span><span class="n">bs</span><span class="p">)</span>
-</pre></div>
-
-
-<p><a id='Bootstrap.noise' href='#Bootstrap.noise'>#</a>
-<strong><code>Bootstrap.noise</code></strong> &mdash; <em>Function</em>.</p>
-<p>Return the noise function of a wild bootstrap sampling</p>
 <p><a id='Confidence-Intervals-1'></a></p>
 <h2 id="confidence-intervals">Confidence Intervals</h2>
-<p><a id='Bootstrap.BasicConfInt' href='#Bootstrap.BasicConfInt'>#</a>
-<strong><code>Bootstrap.BasicConfInt</code></strong> &mdash; <em>Type</em>.</p>
-<p>Basic Confidence Interval</p>
-<div class="codehilite"><pre><span></span><span class="n">BasicConfInt</span><span class="p">(</span><span class="mf">0.95</span><span class="p">)</span>
-</pre></div>
-
-
-<p><a id='Bootstrap.PercentileConfInt' href='#Bootstrap.PercentileConfInt'>#</a>
-<strong><code>Bootstrap.PercentileConfInt</code></strong> &mdash; <em>Type</em>.</p>
-<p>Percentile Confidence Interval</p>
-<div class="codehilite"><pre><span></span><span class="n">PercentileConfInt</span><span class="p">(</span><span class="mf">0.95</span><span class="p">)</span>
-</pre></div>
-
-
-<p><a id='Bootstrap.NormalConfInt' href='#Bootstrap.NormalConfInt'>#</a>
-<strong><code>Bootstrap.NormalConfInt</code></strong> &mdash; <em>Type</em>.</p>
-<p>Normal Confidence Interval</p>
-<div class="codehilite"><pre><span></span><span class="n">NormalConfInt</span><span class="p">(</span><span class="mf">0.95</span><span class="p">)</span>
-</pre></div>
-
-
-<p><a id='Bootstrap.BCaConfInt' href='#Bootstrap.BCaConfInt'>#</a>
-<strong><code>Bootstrap.BCaConfInt</code></strong> &mdash; <em>Type</em>.</p>
-<p>Bias-Corrected and Accelerated (BCa) Confidence Interval</p>
-<div class="codehilite"><pre><span></span><span class="n">BCaConfInt</span><span class="p">(</span><span class="mf">0.95</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span>{docs}
+BasicConfInt
+PercentileConfInt
+NormalConfInt
+BCaConfInt
 </pre></div>
           <aside class="copyright" role="note">
             
