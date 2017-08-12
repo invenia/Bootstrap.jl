@@ -1,19 +1,20 @@
 
 <!DOCTYPE html>
-<html class="no-js">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
       
         <meta name="description" content="Bootstrapping statistic framework for the Julia programming language">
       
       
       
       
-        <link rel="shortcut icon" href="../assets/images/favicon.ico">
+        <link rel="shortcut icon" href="../assets/images/favicon.png">
       
-      <meta name="generator" content="mkdocs+mkdocs-material#1.0.3">
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.8.1">
     
     
       
@@ -21,7 +22,13 @@
       
     
     
-      <script src="../assets/javascripts/modernizr-facb31f4a3.js"></script>
+      <script src="../assets/javascripts/modernizr-1df76c4e58.js"></script>
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application-bfecc7305d.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-02c2a4388f.palette.css">
+      
     
     
       
@@ -34,13 +41,7 @@
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application-f3ab63f78a.css">
-      
-        <link rel="stylesheet" href="../assets/stylesheets/application-02ce7adcc2.palette.css">
-      
-      
-        <link rel="stylesheet" href="../assets/Documenter.css">
-      
+      <link rel="stylesheet" href="../assets/Documenter.css">
     
     
   </head>
@@ -62,13 +63,14 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <header class="md-header">
+      <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href=".." title="Bootstrap.jl" class=" md-icon md-icon--home  md-header-nav__button">
-          
-        </a>
+        
+          <a href=".." title="Bootstrap.jl" class="md-icon md-icon--home md-header-nav__button">
+          </a>
+        
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
@@ -87,26 +89,32 @@
         
           <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
           
-<div class="md-search" data-md-component="search">
-  <div class="md-search__overlay"></div>
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
   <div class="md-search__inner">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
       <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result"></div>
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="" data-md-lang-tokenizer="[\s\-]+">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
       </div>
     </div>
   </div>
 </div>
         
       </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
           <div class="md-header-nav__source">
             
-              
 
 
   
@@ -121,18 +129,20 @@
       </div>
     
     <div class="md-source__repository">
-      GitHub
+      juliangehring/Bootstrap.jl
     </div>
   </a>
 
-            
           </div>
-      </div>
+        </div>
+      
     </div>
   </nav>
 </header>
     
     <div class="md-container">
+      
+      
       <main class="md-main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
@@ -140,11 +150,11 @@
               <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="drawer">
-    <i class=" md-icon md-icon--home  md-nav__button">
-      
-    </i>
+    
+      <i class="md-icon md-icon--home md-nav__button"></i>
+    
     Bootstrap.jl
   </label>
   
@@ -164,7 +174,7 @@
       </div>
     
     <div class="md-source__repository">
-      GitHub
+      juliangehring/Bootstrap.jl
     </div>
   </a>
 
@@ -174,18 +184,24 @@
     
       
       
+      
+
+
   <li class="md-nav__item">
-    
-      <a href=".." title="Introduction" class="md-nav__link">
-        Introduction
-      </a>
-    
+    <a href=".." title="Bootstrap.jl" class="md-nav__link">
+      Bootstrap.jl
+    </a>
   </li>
 
     
       
       
-  <li class="md-nav__item">
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
@@ -245,6 +261,8 @@
   
 </li>
       
+      
+      
     </ul>
   
 </nav>
@@ -254,12 +272,37 @@
     
       
       
+      
+
+
   <li class="md-nav__item">
+    <a href="../references/" title="References" class="md-nav__link">
+      References
+    </a>
+  </li>
+
     
-      <a href="../LICENSE/" title="License" class="md-nav__link">
-        License
-      </a>
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../NEWS/" title="News" class="md-nav__link">
+      News
+    </a>
+  </li>
+
     
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../LICENSE/" title="License" class="md-nav__link">
+      License
+    </a>
   </li>
 
     
@@ -318,6 +361,8 @@
   
 </li>
       
+      
+      
     </ul>
   
 </nav>
@@ -328,64 +373,196 @@
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
-               
-                 <a href="https://github.com/juliangehring/Bootstrap.jl/edit/master/docs/library.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
-               
               
                 
-                <div class="codehilite"><pre><span></span>{meta}
-CurrentModule = Bootstrap
-DocTestSetup  = quote
-    using Bootstrap
-end
-</pre></div>
-
-
-<p><a id='Library-1'></a></p>
-<h1 id="library">Library</h1>
+                
+                <p><a id='Library-1'></a></p>
+<h1 id="library">Library<a class="headerlink" href="#library" title="Permanent link">&para;</a></h1>
 <p><a id='Contents-1'></a></p>
-<h2 id="contents">Contents</h2>
-<div class="codehilite"><pre><span></span>{contents}
-Pages = [&quot;library.md&quot;]
-</pre></div>
-
-
+<h2 id="contents">Contents<a class="headerlink" href="#contents" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="./#Library-1">Library</a><ul>
+<li><a href="./#Contents-1">Contents</a></li>
+<li><a href="./#Index-1">Index</a></li>
+<li><a href="./#Module-1">Module</a></li>
+<li><a href="./#Sampling-1">Sampling</a></li>
+<li><a href="./#Confidence-Intervals-1">Confidence Intervals</a></li>
+</ul>
+</li>
+</ul>
 <p><a id='Index-1'></a></p>
-<h2 id="index">Index</h2>
-<div class="codehilite"><pre><span></span>{index}
-Pages = [&quot;library.md&quot;]
-</pre></div>
-
-
+<h2 id="index">Index<a class="headerlink" href="#index" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="./#Bootstrap"><code>Bootstrap</code></a></li>
+<li><a href="./#Bootstrap.AntitheticSampling"><code>Bootstrap.AntitheticSampling</code></a></li>
+<li><a href="./#Bootstrap.BCaConfInt"><code>Bootstrap.BCaConfInt</code></a></li>
+<li><a href="./#Bootstrap.BalancedSampling"><code>Bootstrap.BalancedSampling</code></a></li>
+<li><a href="./#Bootstrap.BasicConfInt"><code>Bootstrap.BasicConfInt</code></a></li>
+<li><a href="./#Bootstrap.BasicSampling"><code>Bootstrap.BasicSampling</code></a></li>
+<li><a href="./#Bootstrap.ExactSampling"><code>Bootstrap.ExactSampling</code></a></li>
+<li><a href="./#Bootstrap.NormalConfInt"><code>Bootstrap.NormalConfInt</code></a></li>
+<li><a href="./#Bootstrap.PercentileConfInt"><code>Bootstrap.PercentileConfInt</code></a></li>
+<li><a href="./#Bootstrap.ResidualSampling"><code>Bootstrap.ResidualSampling</code></a></li>
+<li><a href="./#Bootstrap.StudentConfInt"><code>Bootstrap.StudentConfInt</code></a></li>
+<li><a href="./#Bootstrap.WildSampling"><code>Bootstrap.WildSampling</code></a></li>
+<li><a href="./#Bootstrap.bias"><code>Bootstrap.bias</code></a></li>
+<li><a href="./#Bootstrap.noise"><code>Bootstrap.noise</code></a></li>
+<li><a href="./#Bootstrap.nrun"><code>Bootstrap.nrun</code></a></li>
+<li><a href="./#Bootstrap.se"><code>Bootstrap.se</code></a></li>
+<li><a href="./#Bootstrap.statistic"><code>Bootstrap.statistic</code></a></li>
+</ul>
 <p><a id='Module-1'></a></p>
-<h2 id="module">Module</h2>
-<div class="codehilite"><pre><span></span>{docs}
-Bootstrap
-</pre></div>
-
-
+<h2 id="module">Module<a class="headerlink" href="#module" title="Permanent link">&para;</a></h2>
+<p><a id='Bootstrap' href='#Bootstrap'>#</a>
+<strong><code>Bootstrap</code></strong> &mdash; <em>Module</em>.</p>
+<p><strong>Bootstrap package</strong></p>
+<p>Statistical bootstrapping for Julia</p>
+<p><a target='_blank' href='https://github.com/juliangehring/Bootstrap.jl/tree/e09c87a195b7113c55c5102ea4fb8b1da120c3e0/src/Bootstrap.jl#L3-L7' class='documenter-source'>source</a><br></p>
 <p><a id='Sampling-1'></a></p>
-<h2 id="sampling">Sampling</h2>
-<div class="codehilite"><pre><span></span>{docs}
-BasicSampling
-BalancedSampling
-ExactSampling
-WildSampling
-ResidualSampling
-nrun
-statistic
-noise
+<h2 id="sampling">Sampling<a class="headerlink" href="#sampling" title="Permanent link">&para;</a></h2>
+<p><a id='Bootstrap.BasicSampling' href='#Bootstrap.BasicSampling'>#</a>
+<strong><code>Bootstrap.BasicSampling</code></strong> &mdash; <em>Type</em>.</p>
+<p>Basic Sampling</p>
+<div class="codehilite"><pre><span></span><span class="n">BasicSampling</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
 </pre></div>
 
 
+<p><a target='_blank' href='https://github.com/juliangehring/Bootstrap.jl/tree/e09c87a195b7113c55c5102ea4fb8b1da120c3e0/src/bootsampling.jl#L26-L33' class='documenter-source'>source</a><br></p>
+<p><a id='Bootstrap.BalancedSampling' href='#Bootstrap.BalancedSampling'>#</a>
+<strong><code>Bootstrap.BalancedSampling</code></strong> &mdash; <em>Type</em>.</p>
+<p>Balanced Sampling</p>
+<div class="codehilite"><pre><span></span><span class="n">BalancedSampling</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+</pre></div>
+
+
+<p><a target='_blank' href='https://github.com/juliangehring/Bootstrap.jl/tree/e09c87a195b7113c55c5102ea4fb8b1da120c3e0/src/bootsampling.jl#L51-L58' class='documenter-source'>source</a><br></p>
+<p><a id='Bootstrap.AntitheticSampling' href='#Bootstrap.AntitheticSampling'>#</a>
+<strong><code>Bootstrap.AntitheticSampling</code></strong> &mdash; <em>Type</em>.</p>
+<p>Antithetic Sampling</p>
+<div class="codehilite"><pre><span></span><span class="n">AntitheticSampling</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+</pre></div>
+
+
+<p><a target='_blank' href='https://github.com/juliangehring/Bootstrap.jl/tree/e09c87a195b7113c55c5102ea4fb8b1da120c3e0/src/bootsampling.jl#L38-L45' class='documenter-source'>source</a><br></p>
+<p><a id='Bootstrap.ExactSampling' href='#Bootstrap.ExactSampling'>#</a>
+<strong><code>Bootstrap.ExactSampling</code></strong> &mdash; <em>Type</em>.</p>
+<p>Exact Sampling</p>
+<div class="codehilite"><pre><span></span><span class="n">ExactSampling</span><span class="p">()</span>
+</pre></div>
+
+
+<p><a target='_blank' href='https://github.com/juliangehring/Bootstrap.jl/tree/e09c87a195b7113c55c5102ea4fb8b1da120c3e0/src/bootsampling.jl#L92-L99' class='documenter-source'>source</a><br></p>
+<p><a id='Bootstrap.WildSampling' href='#Bootstrap.WildSampling'>#</a>
+<strong><code>Bootstrap.WildSampling</code></strong> &mdash; <em>Type</em>.</p>
+<p>Wild Sampling</p>
+<div class="codehilite"><pre><span></span><span class="n">WildSampling</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="n">rademacher</span><span class="p">)</span>
+<span class="n">WildSampling</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="n">mammen</span><span class="p">)</span>
+</pre></div>
+
+
+<p><a target='_blank' href='https://github.com/juliangehring/Bootstrap.jl/tree/e09c87a195b7113c55c5102ea4fb8b1da120c3e0/src/bootsampling.jl#L77-L85' class='documenter-source'>source</a><br></p>
+<p><a id='Bootstrap.ResidualSampling' href='#Bootstrap.ResidualSampling'>#</a>
+<strong><code>Bootstrap.ResidualSampling</code></strong> &mdash; <em>Type</em>.</p>
+<p>Residual Sampling</p>
+<div class="codehilite"><pre><span></span><span class="n">ResidualSampling</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+</pre></div>
+
+
+<p><a target='_blank' href='https://github.com/juliangehring/Bootstrap.jl/tree/e09c87a195b7113c55c5102ea4fb8b1da120c3e0/src/bootsampling.jl#L64-L71' class='documenter-source'>source</a><br></p>
+<p><a id='Bootstrap.bias' href='#Bootstrap.bias'>#</a>
+<strong><code>Bootstrap.bias</code></strong> &mdash; <em>Function</em>.</p>
+<p>Estimate the bias of a bootstrap sampling.</p>
+<div class="codehilite"><pre><span></span><span class="n">bs</span> <span class="o">=</span> <span class="n">bootstrap</span><span class="p">(</span><span class="n">randn</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span> <span class="n">mean</span><span class="p">,</span> <span class="n">BasicSampling</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
+
+<span class="n">bias</span><span class="p">(</span><span class="n">bs</span><span class="p">)</span>
+</pre></div>
+
+
+<p><a target='_blank' href='https://github.com/juliangehring/Bootstrap.jl/tree/e09c87a195b7113c55c5102ea4fb8b1da120c3e0/src/get.jl#L1-L10' class='documenter-source'>source</a><br></p>
+<p><a id='Bootstrap.se' href='#Bootstrap.se'>#</a>
+<strong><code>Bootstrap.se</code></strong> &mdash; <em>Function</em>.</p>
+<p>Estimate the standard error of a bootstrap sampling.</p>
+<div class="codehilite"><pre><span></span><span class="n">bs</span> <span class="o">=</span> <span class="n">bootstrap</span><span class="p">(</span><span class="n">randn</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span> <span class="n">mean</span><span class="p">,</span> <span class="n">BasicSampling</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
+
+<span class="n">se</span><span class="p">(</span><span class="n">bs</span><span class="p">)</span>
+</pre></div>
+
+
+<p><a target='_blank' href='https://github.com/juliangehring/Bootstrap.jl/tree/e09c87a195b7113c55c5102ea4fb8b1da120c3e0/src/get.jl#L17-L26' class='documenter-source'>source</a><br></p>
+<p><a id='Bootstrap.nrun' href='#Bootstrap.nrun'>#</a>
+<strong><code>Bootstrap.nrun</code></strong> &mdash; <em>Function</em>.</p>
+<p>Number of samples drawn from a bootstrap sampling</p>
+<div class="codehilite"><pre><span></span><span class="n">bs</span> <span class="o">=</span> <span class="n">BasicSampling</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+<span class="n">nrun</span><span class="p">(</span><span class="n">bs</span><span class="p">)</span>
+
+<span class="c"># output</span>
+
+<span class="mi">1000</span>
+</pre></div>
+
+
+<p><a target='_blank' href='https://github.com/juliangehring/Bootstrap.jl/tree/e09c87a195b7113c55c5102ea4fb8b1da120c3e0/src/bootsampling.jl#L127-L139' class='documenter-source'>source</a><br></p>
+<p><a id='Bootstrap.statistic' href='#Bootstrap.statistic'>#</a>
+<strong><code>Bootstrap.statistic</code></strong> &mdash; <em>Function</em>.</p>
+<p>Return the statistic function of a <code>BootstrapSample</code></p>
+<div class="codehilite"><pre><span></span><span class="n">bs</span> <span class="o">=</span> <span class="n">bootstrap</span><span class="p">(</span><span class="n">randn</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span> <span class="n">mean</span><span class="p">,</span> <span class="n">BasicSampling</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
+<span class="n">statistic</span><span class="p">(</span><span class="n">bs</span><span class="p">)</span>
+</pre></div>
+
+
+<p><a target='_blank' href='https://github.com/juliangehring/Bootstrap.jl/tree/e09c87a195b7113c55c5102ea4fb8b1da120c3e0/src/bootsampling.jl#L144-L152' class='documenter-source'>source</a><br></p>
+<p><a id='Bootstrap.noise' href='#Bootstrap.noise'>#</a>
+<strong><code>Bootstrap.noise</code></strong> &mdash; <em>Function</em>.</p>
+<p>Return the noise function of a wild bootstrap sampling</p>
+<p><a target='_blank' href='https://github.com/juliangehring/Bootstrap.jl/tree/e09c87a195b7113c55c5102ea4fb8b1da120c3e0/src/bootsampling.jl#L155-L157' class='documenter-source'>source</a><br></p>
 <p><a id='Confidence-Intervals-1'></a></p>
-<h2 id="confidence-intervals">Confidence Intervals</h2>
-<div class="codehilite"><pre><span></span>{docs}
-BasicConfInt
-PercentileConfInt
-NormalConfInt
-BCaConfInt
+<h2 id="confidence-intervals">Confidence Intervals<a class="headerlink" href="#confidence-intervals" title="Permanent link">&para;</a></h2>
+<p><a id='Bootstrap.BasicConfInt' href='#Bootstrap.BasicConfInt'>#</a>
+<strong><code>Bootstrap.BasicConfInt</code></strong> &mdash; <em>Type</em>.</p>
+<p>Basic Confidence Interval</p>
+<div class="codehilite"><pre><span></span><span class="n">BasicConfInt</span><span class="p">(</span><span class="mf">0.95</span><span class="p">)</span>
 </pre></div>
+
+
+<p><a target='_blank' href='https://github.com/juliangehring/Bootstrap.jl/tree/e09c87a195b7113c55c5102ea4fb8b1da120c3e0/src/confint.jl#L5-L12' class='documenter-source'>source</a><br></p>
+<p><a id='Bootstrap.PercentileConfInt' href='#Bootstrap.PercentileConfInt'>#</a>
+<strong><code>Bootstrap.PercentileConfInt</code></strong> &mdash; <em>Type</em>.</p>
+<p>Percentile Confidence Interval</p>
+<div class="codehilite"><pre><span></span><span class="n">PercentileConfInt</span><span class="p">(</span><span class="mf">0.95</span><span class="p">)</span>
+</pre></div>
+
+
+<p><a target='_blank' href='https://github.com/juliangehring/Bootstrap.jl/tree/e09c87a195b7113c55c5102ea4fb8b1da120c3e0/src/confint.jl#L20-L27' class='documenter-source'>source</a><br></p>
+<p><a id='Bootstrap.NormalConfInt' href='#Bootstrap.NormalConfInt'>#</a>
+<strong><code>Bootstrap.NormalConfInt</code></strong> &mdash; <em>Type</em>.</p>
+<p>Normal Confidence Interval</p>
+<div class="codehilite"><pre><span></span><span class="n">NormalConfInt</span><span class="p">(</span><span class="mf">0.95</span><span class="p">)</span>
+</pre></div>
+
+
+<p><a target='_blank' href='https://github.com/juliangehring/Bootstrap.jl/tree/e09c87a195b7113c55c5102ea4fb8b1da120c3e0/src/confint.jl#L39-L46' class='documenter-source'>source</a><br></p>
+<p><a id='Bootstrap.StudentConfInt' href='#Bootstrap.StudentConfInt'>#</a>
+<strong><code>Bootstrap.StudentConfInt</code></strong> &mdash; <em>Type</em>.</p>
+<p>Student's Confidence Interval</p>
+<div class="codehilite"><pre><span></span><span class="n">StudentConfInt</span><span class="p">(</span><span class="mf">0.95</span><span class="p">)</span>
+</pre></div>
+
+
+<p><a target='_blank' href='https://github.com/juliangehring/Bootstrap.jl/tree/e09c87a195b7113c55c5102ea4fb8b1da120c3e0/src/confint.jl#L69-L76' class='documenter-source'>source</a><br></p>
+<p><a id='Bootstrap.BCaConfInt' href='#Bootstrap.BCaConfInt'>#</a>
+<strong><code>Bootstrap.BCaConfInt</code></strong> &mdash; <em>Type</em>.</p>
+<p>Bias-Corrected and Accelerated (BCa) Confidence Interval</p>
+<div class="codehilite"><pre><span></span><span class="n">BCaConfInt</span><span class="p">(</span><span class="mf">0.95</span><span class="p">)</span>
+</pre></div>
+
+
+<p><a target='_blank' href='https://github.com/juliangehring/Bootstrap.jl/tree/e09c87a195b7113c55c5102ea4fb8b1da120c3e0/src/confint.jl#L55-L62' class='documenter-source'>source</a><br></p>
+                
+                  
+                
+              
+              
+                
               
             </article>
           </div>
@@ -398,7 +575,7 @@ BCaConfInt
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href=".." title="Introduction" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href=".." title="Bootstrap.jl" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -407,19 +584,19 @@ BCaConfInt
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Introduction
+                Bootstrap.jl
               </span>
             </div>
           </a>
         
         
-          <a href="../LICENSE/" title="License" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../references/" title="References" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                License
+                References
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -442,6 +619,14 @@ BCaConfInt
       </div>
       
         
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/juliangehring" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
       
     </div>
   </div>
@@ -449,10 +634,12 @@ BCaConfInt
       
     </div>
     
-      <script src="../assets/javascripts/application-2afe21e0b2.js"></script>
-      <script>var config={url:{base:".."}},app=new Application(config);app.initialize()</script>
+      <script src="../assets/javascripts/application-6940329b9f.js"></script>
       
-        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+      <script>app.initialize({url:{base:".."}})</script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
       
         <script src="../assets/mathjaxhelper.js"></script>
       

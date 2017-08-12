@@ -2,12 +2,12 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Motivation\n\n\n{meta}\nCurrentModule = Bootstrap\n\n\n\n\n\nBootstrapping is a widely applicable technique for statistical estimation.\n\n\n\n\n\n\nReferences\n\n\nThe \nbootstrapping wikipedia article\n is a comprehensive summary of the topic.  An extensive description of the bootstrap is the focus of the book \nDavison and Hinkley (1997): \nBootstrap Methods and Their Application\n.  Most of the methodology covered in the book is implemented in the \nboot\n package for the \nR programming language\n.", 
-            "title": "Introduction"
+            "text": "Motivation\n\n\nBootstrapping is a widely applicable technique for statistical estimation.\n\n\n\n\n\n\nReferences\n\n\nThe \nbootstrapping wikipedia article\n is a comprehensive summary of the topic.  An extensive description of the bootstrap is the focus of the book \nDavison and Hinkley (1997): \nBootstrap Methods and Their Application\n.  Most of the methodology covered in the book is implemented in the \nboot\n package for the \nR programming language\n.", 
+            "title": "Bootstrap.jl"
         }, 
         {
             "location": "/#motivation", 
-            "text": "{meta}\nCurrentModule = Bootstrap  Bootstrapping is a widely applicable technique for statistical estimation.", 
+            "text": "Bootstrapping is a widely applicable technique for statistical estimation.", 
             "title": "Motivation"
         }, 
         {
@@ -17,7 +17,7 @@
         }, 
         {
             "location": "/library/", 
-            "text": "{meta}\nCurrentModule = Bootstrap\nDocTestSetup  = quote\n    using Bootstrap\nend\n\n\n\n\n\n\n\nLibrary\n\n\n\n\nContents\n\n\n{contents}\nPages = [\nlibrary.md\n]\n\n\n\n\n\n\n\nIndex\n\n\n{index}\nPages = [\nlibrary.md\n]\n\n\n\n\n\n\n\nModule\n\n\n{docs}\nBootstrap\n\n\n\n\n\n\n\nSampling\n\n\n{docs}\nBasicSampling\nBalancedSampling\nExactSampling\nWildSampling\nResidualSampling\nnrun\nstatistic\nnoise\n\n\n\n\n\n\n\nConfidence Intervals\n\n\n{docs}\nBasicConfInt\nPercentileConfInt\nNormalConfInt\nBCaConfInt", 
+            "text": "Library\n\n\n\n\nContents\n\n\n\n\nLibrary\n\n\nContents\n\n\nIndex\n\n\nModule\n\n\nSampling\n\n\nConfidence Intervals\n\n\n\n\n\n\n\n\n\n\nIndex\n\n\n\n\nBootstrap\n\n\nBootstrap.AntitheticSampling\n\n\nBootstrap.BCaConfInt\n\n\nBootstrap.BalancedSampling\n\n\nBootstrap.BasicConfInt\n\n\nBootstrap.BasicSampling\n\n\nBootstrap.ExactSampling\n\n\nBootstrap.NormalConfInt\n\n\nBootstrap.PercentileConfInt\n\n\nBootstrap.ResidualSampling\n\n\nBootstrap.StudentConfInt\n\n\nBootstrap.WildSampling\n\n\nBootstrap.bias\n\n\nBootstrap.noise\n\n\nBootstrap.nrun\n\n\nBootstrap.se\n\n\nBootstrap.statistic\n\n\n\n\n\n\nModule\n\n\n#\n\n\nBootstrap\n \n \nModule\n.\n\n\nBootstrap package\n\n\nStatistical bootstrapping for Julia\n\n\nsource\n\n\n\n\nSampling\n\n\n#\n\n\nBootstrap.BasicSampling\n \n \nType\n.\n\n\nBasic Sampling\n\n\nBasicSampling\n(\n1000\n)\n\n\n\n\n\n\nsource\n\n\n#\n\n\nBootstrap.BalancedSampling\n \n \nType\n.\n\n\nBalanced Sampling\n\n\nBalancedSampling\n(\n1000\n)\n\n\n\n\n\n\nsource\n\n\n#\n\n\nBootstrap.AntitheticSampling\n \n \nType\n.\n\n\nAntithetic Sampling\n\n\nAntitheticSampling\n(\n1000\n)\n\n\n\n\n\n\nsource\n\n\n#\n\n\nBootstrap.ExactSampling\n \n \nType\n.\n\n\nExact Sampling\n\n\nExactSampling\n()\n\n\n\n\n\n\nsource\n\n\n#\n\n\nBootstrap.WildSampling\n \n \nType\n.\n\n\nWild Sampling\n\n\nWildSampling\n(\n1000\n,\n \nrademacher\n)\n\n\nWildSampling\n(\n1000\n,\n \nmammen\n)\n\n\n\n\n\n\nsource\n\n\n#\n\n\nBootstrap.ResidualSampling\n \n \nType\n.\n\n\nResidual Sampling\n\n\nResidualSampling\n(\n1000\n)\n\n\n\n\n\n\nsource\n\n\n#\n\n\nBootstrap.bias\n \n \nFunction\n.\n\n\nEstimate the bias of a bootstrap sampling.\n\n\nbs\n \n=\n \nbootstrap\n(\nrandn\n(\n20\n),\n \nmean\n,\n \nBasicSampling\n(\n100\n))\n\n\n\nbias\n(\nbs\n)\n\n\n\n\n\n\nsource\n\n\n#\n\n\nBootstrap.se\n \n \nFunction\n.\n\n\nEstimate the standard error of a bootstrap sampling.\n\n\nbs\n \n=\n \nbootstrap\n(\nrandn\n(\n20\n),\n \nmean\n,\n \nBasicSampling\n(\n100\n))\n\n\n\nse\n(\nbs\n)\n\n\n\n\n\n\nsource\n\n\n#\n\n\nBootstrap.nrun\n \n \nFunction\n.\n\n\nNumber of samples drawn from a bootstrap sampling\n\n\nbs\n \n=\n \nBasicSampling\n(\n1000\n)\n\n\nnrun\n(\nbs\n)\n\n\n\n# output\n\n\n\n1000\n\n\n\n\n\n\nsource\n\n\n#\n\n\nBootstrap.statistic\n \n \nFunction\n.\n\n\nReturn the statistic function of a \nBootstrapSample\n\n\nbs\n \n=\n \nbootstrap\n(\nrandn\n(\n20\n),\n \nmean\n,\n \nBasicSampling\n(\n100\n))\n\n\nstatistic\n(\nbs\n)\n\n\n\n\n\n\nsource\n\n\n#\n\n\nBootstrap.noise\n \n \nFunction\n.\n\n\nReturn the noise function of a wild bootstrap sampling\n\n\nsource\n\n\n\n\nConfidence Intervals\n\n\n#\n\n\nBootstrap.BasicConfInt\n \n \nType\n.\n\n\nBasic Confidence Interval\n\n\nBasicConfInt\n(\n0.95\n)\n\n\n\n\n\n\nsource\n\n\n#\n\n\nBootstrap.PercentileConfInt\n \n \nType\n.\n\n\nPercentile Confidence Interval\n\n\nPercentileConfInt\n(\n0.95\n)\n\n\n\n\n\n\nsource\n\n\n#\n\n\nBootstrap.NormalConfInt\n \n \nType\n.\n\n\nNormal Confidence Interval\n\n\nNormalConfInt\n(\n0.95\n)\n\n\n\n\n\n\nsource\n\n\n#\n\n\nBootstrap.StudentConfInt\n \n \nType\n.\n\n\nStudent's Confidence Interval\n\n\nStudentConfInt\n(\n0.95\n)\n\n\n\n\n\n\nsource\n\n\n#\n\n\nBootstrap.BCaConfInt\n \n \nType\n.\n\n\nBias-Corrected and Accelerated (BCa) Confidence Interval\n\n\nBCaConfInt\n(\n0.95\n)\n\n\n\n\n\n\nsource", 
             "title": "Library"
         }, 
         {
@@ -27,28 +27,138 @@
         }, 
         {
             "location": "/library/#contents", 
-            "text": "{contents}\nPages = [ library.md ]", 
+            "text": "Library  Contents  Index  Module  Sampling  Confidence Intervals", 
             "title": "Contents"
         }, 
         {
             "location": "/library/#index", 
-            "text": "{index}\nPages = [ library.md ]", 
+            "text": "Bootstrap  Bootstrap.AntitheticSampling  Bootstrap.BCaConfInt  Bootstrap.BalancedSampling  Bootstrap.BasicConfInt  Bootstrap.BasicSampling  Bootstrap.ExactSampling  Bootstrap.NormalConfInt  Bootstrap.PercentileConfInt  Bootstrap.ResidualSampling  Bootstrap.StudentConfInt  Bootstrap.WildSampling  Bootstrap.bias  Bootstrap.noise  Bootstrap.nrun  Bootstrap.se  Bootstrap.statistic", 
             "title": "Index"
         }, 
         {
             "location": "/library/#module", 
-            "text": "{docs}\nBootstrap", 
+            "text": "#  Bootstrap     Module .  Bootstrap package  Statistical bootstrapping for Julia  source", 
             "title": "Module"
         }, 
         {
             "location": "/library/#sampling", 
-            "text": "{docs}\nBasicSampling\nBalancedSampling\nExactSampling\nWildSampling\nResidualSampling\nnrun\nstatistic\nnoise", 
+            "text": "#  Bootstrap.BasicSampling     Type .  Basic Sampling  BasicSampling ( 1000 )   source  #  Bootstrap.BalancedSampling     Type .  Balanced Sampling  BalancedSampling ( 1000 )   source  #  Bootstrap.AntitheticSampling     Type .  Antithetic Sampling  AntitheticSampling ( 1000 )   source  #  Bootstrap.ExactSampling     Type .  Exact Sampling  ExactSampling ()   source  #  Bootstrap.WildSampling     Type .  Wild Sampling  WildSampling ( 1000 ,   rademacher )  WildSampling ( 1000 ,   mammen )   source  #  Bootstrap.ResidualSampling     Type .  Residual Sampling  ResidualSampling ( 1000 )   source  #  Bootstrap.bias     Function .  Estimate the bias of a bootstrap sampling.  bs   =   bootstrap ( randn ( 20 ),   mean ,   BasicSampling ( 100 ))  bias ( bs )   source  #  Bootstrap.se     Function .  Estimate the standard error of a bootstrap sampling.  bs   =   bootstrap ( randn ( 20 ),   mean ,   BasicSampling ( 100 ))  se ( bs )   source  #  Bootstrap.nrun     Function .  Number of samples drawn from a bootstrap sampling  bs   =   BasicSampling ( 1000 )  nrun ( bs )  # output  1000   source  #  Bootstrap.statistic     Function .  Return the statistic function of a  BootstrapSample  bs   =   bootstrap ( randn ( 20 ),   mean ,   BasicSampling ( 100 ))  statistic ( bs )   source  #  Bootstrap.noise     Function .  Return the noise function of a wild bootstrap sampling  source", 
             "title": "Sampling"
         }, 
         {
             "location": "/library/#confidence-intervals", 
-            "text": "{docs}\nBasicConfInt\nPercentileConfInt\nNormalConfInt\nBCaConfInt", 
+            "text": "#  Bootstrap.BasicConfInt     Type .  Basic Confidence Interval  BasicConfInt ( 0.95 )   source  #  Bootstrap.PercentileConfInt     Type .  Percentile Confidence Interval  PercentileConfInt ( 0.95 )   source  #  Bootstrap.NormalConfInt     Type .  Normal Confidence Interval  NormalConfInt ( 0.95 )   source  #  Bootstrap.StudentConfInt     Type .  Student's Confidence Interval  StudentConfInt ( 0.95 )   source  #  Bootstrap.BCaConfInt     Type .  Bias-Corrected and Accelerated (BCa) Confidence Interval  BCaConfInt ( 0.95 )   source", 
             "title": "Confidence Intervals"
+        }, 
+        {
+            "location": "/references/", 
+            "text": "References\n\n\n\n\nIntroduction\n\n\n\n\nBootstrapping (statistics)\n. Wikipedia\n\n\n\n\n\n\nMethodology\n\n\n\n\nDavison, A. C.: \nBootstrap Methods and Their Application\n. Cambridge University Press, 1997\n\n\nEfron, B.: \nBootstrap Methods: Another Look at the Jackknife\n. The Annals of Statistics 7, no. 1 (January 1979): 1\u201326. \ndoi:10.1214/aos/1176344552\n\n\n\n\n\n\nAlgorithms\n\n\n\n\nGleason, John R. \nAlgorithms for Balanced Bootstrap Simulations\n. The American Statistician 42, no. 4 (November 1, 1988): 263\u201366. \ndoi:10.2307/2685134\n\n\n\n\n\n\nSoftware\n\n\n\n\nCanty, Angelo, and Brian Ripley. \nBoot: Bootstrap Functions\n. \nR\n package", 
+            "title": "References"
+        }, 
+        {
+            "location": "/references/#references", 
+            "text": "", 
+            "title": "References"
+        }, 
+        {
+            "location": "/references/#introduction", 
+            "text": "Bootstrapping (statistics) . Wikipedia", 
+            "title": "Introduction"
+        }, 
+        {
+            "location": "/references/#methodology", 
+            "text": "Davison, A. C.:  Bootstrap Methods and Their Application . Cambridge University Press, 1997  Efron, B.:  Bootstrap Methods: Another Look at the Jackknife . The Annals of Statistics 7, no. 1 (January 1979): 1\u201326.  doi:10.1214/aos/1176344552", 
+            "title": "Methodology"
+        }, 
+        {
+            "location": "/references/#algorithms", 
+            "text": "Gleason, John R.  Algorithms for Balanced Bootstrap Simulations . The American Statistician 42, no. 4 (November 1, 1988): 263\u201366.  doi:10.2307/2685134", 
+            "title": "Algorithms"
+        }, 
+        {
+            "location": "/references/#software", 
+            "text": "Canty, Angelo, and Brian Ripley.  Boot: Bootstrap Functions .  R  package", 
+            "title": "Software"
+        }, 
+        {
+            "location": "/NEWS/", 
+            "text": "Bootstrap.jl News and Changes\n\n\n\n\nVersion 1.1.0\n\n\n\n\nChanges\n\n\n\n\nAdds compatibility with julia 0.6 development versions, including automated tests.\n\n\nIntroduces \nCompat\n as a new dependency\n\n\nSupports formula macros for DataFrame formulas (required for using \nDataFrames\n v0.9.0 or newer)\n\n\nFixes convergence errors of GLM models in parametric bootstrap test cases\n\n\nModernise automated test and coverage setup (also thanks to \nTony Kelman\n for contributions)\n\n\nImproves the readme (also thanks to \nPatrick Kofod Mogensen\n for contributions)\n\n\n\n\n\n\nSupport\n\n\n\n\nRequires julia 0.5 or 0.6\n\n\nDrops support for julia 0.4\n\n\n\n\n\n\nVersion 1.0.0\n\n\n\n\nVersion 0.3.3\n\n\n\n\nType compatibility with julia 0.4\n\n\nTest code in readme as part of the unit tests\n\n\nScript to rebuild notebook automatically\n\n\nUnified number of observations \nnobs\n interface with tests\n\n\nCalculate number of exact bootstrap samples explictly\n\n\nDoc notebooks: Cleanup\n\n\n\n\n\n\nVersion 0.3.2\n\n\n\n\nOfficial support for julia 0.4\n\n\nPrecompilation in julia 0.4\n\n\nDOI for release versions, making it possible to properly cite the software\n\n\nImproved \nshow\n method for \nBootstrapSample\n and \nBootstrapCI\n\n\n\n\n\n\nVersion 0.3.1\n\n\n\n\nSample quantiles with Gaussian interpolation\n\n\nGeneralize integer types\n\n\nWindows integration and build service\n\n\nCodecov\n\n\n\n\n\n\nVersion 0.3.0\n\n\n\n\nImproved and more consistent documentation, using simple docstrings\n\n\nData summary in show methods, instead of displaying the entire data set\n\n\nReference list as part of the documentation\n\n\n\n\n\n\nVersion 0.2.0\n\n\n\n\nDocumentation of the package and the functions on readthedocs.org\n\n\nRequire julia v0.3, excluding prereleases\n\n\n\n\n\n\nVersion 0.1.1\n\n\n\n\nVersion 0.1.0\n\n\nMajor changes:\n\n\n\n\nSimplify travis\n\n\nReadme: Package status and logo\n\n\nInterface: Individual functions for \nboot\n and \nci\n\n\nSupport \nArray\n and \nDataFrame\n input\n\n\nRequire: \nDataFrames\n and \nDocile\n\n\nDoc: Workflows in notebooks\n\n\nDoc: Function documentation with Docile\n\n\nExtend balanced bootstrap functionality\n\n\nBCa CI with jackknife\n\n\nParametric \nBootstrap*\n types\n\n\nGeneralized sampling methods\n\n\nIO in \nshow\n methods\n\n\nTest: Doctest based on \nDocile\n\n\nTest for new functionality\n\n\n\n\n\n\nVersion 0.0.3\n\n\n\n\nTest cases for \nDistributions\n dependencies\n\n\nModular tests\n\n\nRemove unused plotting dependencies\n\n\n\n\n\n\nVersion 0.0.2\n\n\n\n\nNormal CI in \nboot_ci\n, with test cases\n\n\n\n\n\n\nVersion 0.0.1\n\n\nInitial release", 
+            "title": "News"
+        }, 
+        {
+            "location": "/NEWS/#bootstrapjl-news-and-changes", 
+            "text": "", 
+            "title": "Bootstrap.jl News and Changes"
+        }, 
+        {
+            "location": "/NEWS/#version-110", 
+            "text": "", 
+            "title": "Version 1.1.0"
+        }, 
+        {
+            "location": "/NEWS/#changes", 
+            "text": "Adds compatibility with julia 0.6 development versions, including automated tests.  Introduces  Compat  as a new dependency  Supports formula macros for DataFrame formulas (required for using  DataFrames  v0.9.0 or newer)  Fixes convergence errors of GLM models in parametric bootstrap test cases  Modernise automated test and coverage setup (also thanks to  Tony Kelman  for contributions)  Improves the readme (also thanks to  Patrick Kofod Mogensen  for contributions)", 
+            "title": "Changes"
+        }, 
+        {
+            "location": "/NEWS/#support", 
+            "text": "Requires julia 0.5 or 0.6  Drops support for julia 0.4", 
+            "title": "Support"
+        }, 
+        {
+            "location": "/NEWS/#version-100", 
+            "text": "", 
+            "title": "Version 1.0.0"
+        }, 
+        {
+            "location": "/NEWS/#version-033", 
+            "text": "Type compatibility with julia 0.4  Test code in readme as part of the unit tests  Script to rebuild notebook automatically  Unified number of observations  nobs  interface with tests  Calculate number of exact bootstrap samples explictly  Doc notebooks: Cleanup", 
+            "title": "Version 0.3.3"
+        }, 
+        {
+            "location": "/NEWS/#version-032", 
+            "text": "Official support for julia 0.4  Precompilation in julia 0.4  DOI for release versions, making it possible to properly cite the software  Improved  show  method for  BootstrapSample  and  BootstrapCI", 
+            "title": "Version 0.3.2"
+        }, 
+        {
+            "location": "/NEWS/#version-031", 
+            "text": "Sample quantiles with Gaussian interpolation  Generalize integer types  Windows integration and build service  Codecov", 
+            "title": "Version 0.3.1"
+        }, 
+        {
+            "location": "/NEWS/#version-030", 
+            "text": "Improved and more consistent documentation, using simple docstrings  Data summary in show methods, instead of displaying the entire data set  Reference list as part of the documentation", 
+            "title": "Version 0.3.0"
+        }, 
+        {
+            "location": "/NEWS/#version-020", 
+            "text": "Documentation of the package and the functions on readthedocs.org  Require julia v0.3, excluding prereleases", 
+            "title": "Version 0.2.0"
+        }, 
+        {
+            "location": "/NEWS/#version-011", 
+            "text": "", 
+            "title": "Version 0.1.1"
+        }, 
+        {
+            "location": "/NEWS/#version-010", 
+            "text": "Major changes:   Simplify travis  Readme: Package status and logo  Interface: Individual functions for  boot  and  ci  Support  Array  and  DataFrame  input  Require:  DataFrames  and  Docile  Doc: Workflows in notebooks  Doc: Function documentation with Docile  Extend balanced bootstrap functionality  BCa CI with jackknife  Parametric  Bootstrap*  types  Generalized sampling methods  IO in  show  methods  Test: Doctest based on  Docile  Test for new functionality", 
+            "title": "Version 0.1.0"
+        }, 
+        {
+            "location": "/NEWS/#version-003", 
+            "text": "Test cases for  Distributions  dependencies  Modular tests  Remove unused plotting dependencies", 
+            "title": "Version 0.0.3"
+        }, 
+        {
+            "location": "/NEWS/#version-002", 
+            "text": "Normal CI in  boot_ci , with test cases", 
+            "title": "Version 0.0.2"
+        }, 
+        {
+            "location": "/NEWS/#version-001", 
+            "text": "Initial release", 
+            "title": "Version 0.0.1"
         }, 
         {
             "location": "/LICENSE/", 
